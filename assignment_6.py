@@ -25,3 +25,5 @@ def sum_of_even_numbers(num):
 
     # Use list comprehension to filter even numbers and sum them
     print(sum([n for n in range(1, num + 1) if n % 2 == 0]))
+
+# print(sum(range(2, num + 1, 2))) <<<<<======= (alternate, it does not check for every number with n%2==0, just just picks up even numbers)

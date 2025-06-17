@@ -1,20 +1,40 @@
 '''
-This is the more optimised way: (Two Pointer approah for palindrome check):
-'''
-def is_palindrome(N, Str):
-    left, right = 0, N - 1
-    is_pal = True
+🧠 PROBLEM STATEMENT:
+Check whether a given string of length `N` is a palindrome.
 
+A palindrome is a string that reads the same forwards and backwards.
+We will compare characters from the start and end, moving inward.
+
+✅ Examples:
+
+>>> is_palindrome(5, "madam")
+Yes
+
+>>> is_palindrome(6, "coding")
+No
+'''
+
+def is_palindrome(N, Str):
+    # Start two pointers: one from the beginning, one from the end
+    left = 0
+    right = N - 1
+
+    # Keep checking characters until the pointers meet or cross
     while left < right:
+        # If characters at current positions don't match, it's not a palindrome
         if Str[left] != Str[right]:
-            is_pal = False
-            break
+            print("No")
+            return  # Exit early if mismatch is found
+
+        # Move both pointers toward the center
         left += 1
         right -= 1
 
-    print("Yes" if is_pal else "No")
+    # If loop completes with no mismatches, it's a palindrome
+    print("Yes")
 
 
+# Below what you see was my first approach.
 '''
 🧠 PROBLEM STATEMENT:
 Given an integer `N` and a string `Str` of length `N`, determine if the string is a **palindrome**.

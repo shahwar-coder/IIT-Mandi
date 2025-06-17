@@ -1,4 +1,21 @@
 '''
+This is the more optimised way: (Two Pointer approah for palindrome check):
+'''
+def is_palindrome(N, Str):
+    left, right = 0, N - 1
+    is_pal = True
+
+    while left < right:
+        if Str[left] != Str[right]:
+            is_pal = False
+            break
+        left += 1
+        right -= 1
+
+    print("Yes" if is_pal else "No")
+
+
+'''
 🧠 PROBLEM STATEMENT:
 Given an integer `N` and a string `Str` of length `N`, determine if the string is a **palindrome**.
 A palindrome is a string that reads the same forward and backward.

@@ -21,3 +21,11 @@ def solve(arr, N, M):
         for j in i:  # Loop through each element in the row
             print(j, end=" ")  # Print element with space
         print()  # Move to the next line after each row
+
+'''
+def solve(arr, N, M):
+    for row in arr:
+        print(*row)
+
+# Can be said as more optimised one, we just unpack each row, one at a time.
+'''
